@@ -1,0 +1,22 @@
+name: liteproxy.ui
+
+networks:
+  kong:
+    driver: bridge
+    name: kong-net
+
+services:
+  nginx:
+    container_name: liteproxy-ui-service
+    image: node:20
+    build:
+      context: ./
+    networks:
+      - kong
+    ports:
+      - 3001:3001
+
+    restart: always
+    labels:
+      - 'liteproxy'
+      - 'vite'
