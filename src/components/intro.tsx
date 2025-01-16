@@ -23,7 +23,7 @@ export const Intro = () => {
       <Box mt={20}>
         <Text>How to use?</Text>
         <Text>
-          Base Path: <Code>https://liteproxy.collinkleest.com/proxy</Code>
+          Base Path: <Code>https://api.liteproxy.collinkleest.com/proxy</Code>
 
           
         </Text>
@@ -32,7 +32,7 @@ export const Intro = () => {
         </Text>
 
         <Text>
-        Pass in your desired api endpoint <Code>https://liteproxy.collinkleest.com/proxy?url=https://jsonplaceholder.typicode.com/comments?postId=1</Code>
+        Pass in your desired api endpoint <Code>https://api.liteproxy.collinkleest.com/proxy?url=https://jsonplaceholder.typicode.com/comments?postId=1</Code>
         </Text>
       </Box>
     </>

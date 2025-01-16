@@ -10,7 +10,7 @@ export const Try = () => {
         if (clicks > 3) {
             return
         }
-        fetch('https://liteproxy.collinkleest.com/proxy?url=https://jsonplaceholder.typicode.com/comments?postId=1').then((response) => {
+        fetch('https://api.liteproxy.collinkleest.com/proxy?url=https://jsonplaceholder.typicode.com/comments?postId=1').then((response) => {
             return response.json();
         }).then((json) => {
             setResponse(JSON.stringify(json))
@@ -23,7 +23,7 @@ export const Try = () => {
 
       <Text>
         <Code>
-          https://liteproxy.collinkleest.com/proxy?url=https://jsonplaceholder.typicode.com/comments?postId=1
+          https://api.liteproxy.collinkleest.com/proxy?url=https://jsonplaceholder.typicode.com/comments?postId=1
         </Code>
 
       </Text>
