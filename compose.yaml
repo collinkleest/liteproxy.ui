@@ -8,7 +8,6 @@ networks:
 services:
   nginx:
     container_name: liteproxy-ui-service
-    image: node:20
     build:
       context: ./
     networks:
