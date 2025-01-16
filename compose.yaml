@@ -6,7 +6,7 @@ networks:
     name: kong-net
 
 services:
-  nginx:
+  liteproxy-ui:
     container_name: liteproxy-ui-service
     build:
       context: ./
