@@ -3,7 +3,7 @@ import { Box, Code, Heading, Highlight, Text } from "@chakra-ui/react";
 export const Intro = () => {
   return (
     <>
-      <Box w={'40em'}>
+      <Box>
         <Heading size="5xl" letterSpacing={"tight"}>
           <Highlight
             query={["lightweight", "proxy"]}
