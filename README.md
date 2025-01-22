@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# liteproxy.ui
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/collinkleest/liteproxy.ui/release.yaml)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fliteproxy.collinkleest.com)
+![GitHub Release](https://img.shields.io/github/v/release/collinkleest/liteproxy.ui)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
 
-Currently, two official plugins are available:
+1. [Local Development](#local-development)
+4. [Build](#build)
+3. [Linting](#linting)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Local Development
+Clone repo and change directory into `liteproxy.ui`
+```bash
+git clone https://github.com/collinkleest/liteproxy.ui.git
+cd liteproxy.ui
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Install the dependencies with your npm dep engine of choice (i choose `pnpm`)
+```bash
+pnpm install
+```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Run the local development server
+```bash
+pnpm dev
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### Build
+Build the application, this will put the build output into the `dist` folder.
+```bash
+pnpm build
+```
+
+After you've built a production version of the application you can preview it with the following.
+```bash
+pnpm preview
+```
+
+### Linting
+```bash
+pnpm lint
 ```
