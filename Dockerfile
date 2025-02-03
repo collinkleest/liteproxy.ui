@@ -1,16 +1,18 @@
-FROM node:20
+FROM node:alpine
 
 WORKDIR /usr/src/app
 
-RUN npm install -g pnpm
+# Enable Corepack for pnpm
+RUN corepack enable
 
-RUN npm i -g serve
-
+# Copy package files and install dependencies in a single layer for caching
 COPY package.json pnpm-lock.yaml ./
+RUN corepack prepare pnpm@latest --activate && pnpm install --frozen-lockfile
 
 RUN pnpm install
 
 COPY . .
+
 
 RUN pnpm build
 
