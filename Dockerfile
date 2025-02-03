@@ -9,10 +9,11 @@ RUN corepack enable
 COPY package.json pnpm-lock.yaml ./
 RUN corepack prepare pnpm@latest --activate && pnpm install --frozen-lockfile
 
-RUN pnpm install
+RUN pnpm install --frozen-lockfile
+
+RUN npm i -g serve
 
 COPY . .
-
 
 RUN pnpm build
 
