@@ -34,6 +34,9 @@ export const Intro = () => {
         <Text>
         Pass in your desired api endpoint <Code>https://api.liteproxy.collinkleest.com/proxy?url=https://jsonplaceholder.typicode.com/comments?postId=1</Code>
         </Text>
+
+        <Text>Note: this only works with <Code>GET, OPTIONS</Code> requests as of now</Text>
+        <Text>Also all responses are cached within a redis cache for 15 minutes</Text>
       </Box>
     </>
   );
